@@ -1,1 +1,0 @@
-console.log("the server s comming soon");
