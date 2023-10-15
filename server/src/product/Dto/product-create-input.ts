@@ -10,6 +10,5 @@ export class CreateProductInput {
 
   @Field(() => Int)
   categoryId: number;
-  
  
 }

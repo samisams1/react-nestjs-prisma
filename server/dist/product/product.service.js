@@ -52,14 +52,14 @@ let ProductService = class ProductService {
                 data: {
                     quantity: 0,
                     productId: product.id,
-                    userId: 1
+                    userId: 2
                 }
             });
             const store = await this.prisma.store.create({
                 data: {
                     quantity: 0,
                     productId: product.id,
-                    userId: 1
+                    userId: 2
                 }
             });
             return product;

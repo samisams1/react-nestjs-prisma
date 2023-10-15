@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const graphql_1 = require("@nestjs/graphql");
@@ -42,7 +41,7 @@ __decorate([
 ], User.prototype, "lastName", void 0);
 __decorate([
     (0, graphql_1.Field)(),
-    __metadata("design:type", typeof (_a = typeof client_1.RoleEnum !== "undefined" && client_1.RoleEnum) === "function" ? _a : Object)
+    __metadata("design:type", String)
 ], User.prototype, "role", void 0);
 __decorate([
     (0, graphql_1.Field)(),
