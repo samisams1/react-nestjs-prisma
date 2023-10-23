@@ -12,21 +12,7 @@ input ChangePasswordInput {
   newPassword: String!
 }
 
-type Company {
-  address: String!
-  createdAt: DateTime!
-  eemployees: [User!]
-  id: Int!
-  name: String!
-  updatedAt: DateTime!
-}
-
 input CreateCategoryInput {
-  name: String!
-}
-
-input CreateCompanyInput {
-  address: String!
   name: String!
 }
 
@@ -90,25 +76,27 @@ input LoginInput {
   username: String!
 }
 
+type LoginResponse {
+  token: String!
+  user: User!
+}
+
 type Mutation {
   acceptStoreProduct(input: [UpdateStoreInput!]!): [store!]!
   changePassword(changePasswordInput: ChangePasswordInput!, userId: Float!): User!
   createCategory(data: CreateCategoryInput!): Category!
-  createCompany(input: CreateCompanyInput!): Company!
   createOrder(input: CreateOrderInput!): order!
   createProduct(input: CreateProductInput!): product!
   createSale(input: CreateSaleInput!): sale!
   createShopeProduct(input: CreateShopeProductInput!): shopeProduct!
   createUser(input: CreateUserInput!): User!
   deleteCategory(id: Int!): Category!
-  deleteCompany: Company!
   deleteShopeProduct: shopeProduct!
   deleteUser(id: Int!): User!
   forgotPassword(email: String!): Boolean!
-  login(input: LoginInput!): String!
+  login(input: LoginInput!): LoginResponse!
   sendNotification(message: String!, recipientId: Float!, soundUrl: String!): Boolean!
   updateCategory(id: Int!): Category!
-  updateCompany: String!
   updateProduct(id: Int!, input: UpdateProductInput!): product!
   updateProductPrice(id: Int!, input: UpdateProductPriceInput!): product!
   updateShopeProduct: shopeProduct!
@@ -139,8 +127,6 @@ input ProductInput {
 type Query {
   categories: [Category!]!
   category(id: Int!): Category!
-  companies: [Company!]!
-  company(id: Int!): Company!
   countOrder: Float!
   countProducts: Float!
   countStoreProducts: Float!

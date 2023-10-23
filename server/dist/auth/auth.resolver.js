@@ -21,6 +21,7 @@ const common_2 = require("@nestjs/common");
 const current_user_decorator_1 = require("./decorators/current-user.decorator");
 const user_entity_1 = require("../users/entities/user.entity");
 const gql_auth_guard_1 = require("./gql-auth-guard");
+const login_resonse_1 = require("./dto/login-resonse");
 let AuthResolver = class AuthResolver {
     constructor(authService) {
         this.authService = authService;
@@ -28,7 +29,11 @@ let AuthResolver = class AuthResolver {
     async login(input) {
         const user = await this.authService.validateUser(input.username, input.password);
         if (user) {
-            return this.authService.login(user);
+            const token = await this.authService.login(user);
+            return {
+                token,
+                user,
+            };
         }
         throw new common_1.NotFoundException('User not found');
     }
@@ -38,7 +43,7 @@ let AuthResolver = class AuthResolver {
 };
 exports.AuthResolver = AuthResolver;
 __decorate([
-    (0, graphql_1.Mutation)(() => String),
+    (0, graphql_1.Mutation)(() => login_resonse_1.LoginResponse),
     __param(0, (0, graphql_1.Args)('input')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [login_input_1.LoginInput]),

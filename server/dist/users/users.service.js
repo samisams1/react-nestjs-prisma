@@ -40,7 +40,6 @@ let UsersService = class UsersService {
                     username,
                     email,
                     password: hashedPassword,
-                    companyId: 1,
                     phoneNumber: "+251973316377",
                     address: "Addis Ababa",
                     role: role

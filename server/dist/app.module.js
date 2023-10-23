@@ -14,7 +14,6 @@ const path_1 = require("path");
 const users_module_1 = require("./users/users.module");
 const prisma_service_1 = require("./prisma/prisma.service");
 const auth_module_1 = require("./auth/auth.module");
-const company_module_1 = require("./company/company.module");
 const store_module_1 = require("./store/store.module");
 const category_resolver_1 = require("./category/category.resolver");
 const category_module_1 = require("./category/category.module");
@@ -43,7 +42,6 @@ exports.AppModule = AppModule = __decorate([
             users_module_1.UsersModule,
             auth_module_1.AuthModule,
             shopeProduct_module_1.ShopeProductModule,
-            company_module_1.CompanyModule,
             category_module_1.CategoryModule,
             store_module_1.StoreModule,
             category_module_1.CategoryModule,

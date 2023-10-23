@@ -2,7 +2,6 @@ import { UseGuards } from '@nestjs/common';
 import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
 import { GqlAuthGuard } from 'src/auth/gql-auth-guard';
 import { RolesGuard } from 'src/auth/guards/roles.gurd';
-import { Company } from 'src/company/company.entity';
 import { Category } from './category.entity';
 import { CategoryService } from './category.service';
 import { CreateCategoryInput } from './Dto/create-category.input';

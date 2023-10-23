@@ -45,14 +45,14 @@ export class ProductService {
           data: {
             quantity: 0,
             productId: product.id,
-            userId: 2
+            userId: 1
           }
         });
         const store = await this.prisma.store.create({
           data: {
             quantity: 0,
             productId: product.id,
-            userId: 2
+            userId: 1
           }
         });
         return product;

@@ -18,12 +18,12 @@ exports.LoginResponse = LoginResponse;
 __decorate([
     (0, graphql_1.Field)(),
     __metadata("design:type", String)
-], LoginResponse.prototype, "access_token", void 0);
+], LoginResponse.prototype, "token", void 0);
 __decorate([
-    (0, graphql_1.Field)(),
+    (0, graphql_1.Field)(() => user_entity_1.User),
     __metadata("design:type", user_entity_1.User)
 ], LoginResponse.prototype, "user", void 0);
 exports.LoginResponse = LoginResponse = __decorate([
-    (0, graphql_1.InputType)()
+    (0, graphql_1.ObjectType)()
 ], LoginResponse);
 //# sourceMappingURL=login-resonse.js.map

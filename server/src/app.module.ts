@@ -5,7 +5,6 @@ import { join } from 'path';
 import { UsersModule } from './users/users.module';
 import { PrismaService } from './prisma/prisma.service';
 import { AuthModule } from './auth/auth.module';
-import { CompanyModule } from './company/company.module';
 import { StoreModule } from './store/store.module';
 import { CategoryResolver } from './category/category.resolver';
 import { CategoryModule } from './category/category.module';
@@ -30,7 +29,6 @@ import { ReportModule } from './report/report.module';
     UsersModule,
     AuthModule,
     ShopeProductModule,
-    CompanyModule,
     CategoryModule,
     StoreModule,
     CategoryModule,

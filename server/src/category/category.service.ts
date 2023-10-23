@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Company, Prisma, PrismaClient } from '@prisma/client';
+import {  Prisma, PrismaClient } from '@prisma/client';
 import { Category } from './category.entity';
 
 @Injectable()
